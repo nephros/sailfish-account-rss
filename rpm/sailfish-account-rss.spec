@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 Name: sailfish-account-rss
-Version: 0.1.0
+Version: 0.1.0.1
 Release: 1
 Summary: Sailfish OS account integration for RSS and Atom feeds
 License: BSD-3-Clause AND LGPL-2.1-or-later
