@@ -373,6 +373,9 @@ AccountCreationAgent {
                 autoSyncConf.key = "/desktop/lipstick-jolla-home/events/auto_sync_feeds/"
                         + newAccount.identifier
                 autoSyncConf.value = true
+                compactLayoutConf.key = "/desktop/lipstick-jolla-home/events/compact_feed_layout/"
+                        + newAccount.identifier
+                compactLayoutConf.value = false
                 syncAdapter.triggerSync(newAccount)
                 root.accountCreated(newAccount.identifier)
                 root.delayDeletion = false
@@ -509,6 +512,10 @@ AccountCreationAgent {
 
             ConfigurationValue {
                 id: autoSyncConf
+            }
+
+            ConfigurationValue {
+                id: compactLayoutConf
             }
 
             Component.onDestruction: cancelRequest()

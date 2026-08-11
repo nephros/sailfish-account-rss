@@ -188,4 +188,29 @@ StandardAccountSettingsDisplay {
         key: "/desktop/lipstick-jolla-home/events/auto_sync_feeds/"
              + root.account.identifier
     }
+
+    TextSwitch {
+        id: compactLayoutSwitch
+
+        enabled: root.postsServiceEnabled
+        //% "Use compact feed layout"
+        text: qsTrId("settings-accounts-rss-la-compact_delegate")
+        //% "Makes the feet items use less space in the Events View."
+        description: qsTrId("settings-accounts-rss-la-compact_delegate_description")
+
+        onCheckedChanged: {
+            if (root.account.identifier > 0) {
+                compactLayoutConf.value = checked
+            }
+        }
+    }
+
+    ConfigurationValue {
+        id: compactLayoutConf
+
+        key: "/desktop/lipstick-jolla-home/events/compact_feed_layout/"
+             + root.account.identifier
+    }
+
+
 }
