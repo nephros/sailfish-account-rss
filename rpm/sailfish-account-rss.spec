@@ -24,7 +24,7 @@ BuildRequires: pkgconfig(libsignon-qt5)
 BuildRequires: pkgconfig(socialcache)
 
 Requires: buteo-syncfw-qt5-msyncd
-Requires: eventsview-extensions >= 0.1.13
+Requires: eventsview-extensions >= 0.1.11
 Requires: jolla-settings-accounts
 Requires: lipstick-jolla-home-qt5-components >= 1.2.50
 Requires: nemo-qml-plugin-configuration-qt5

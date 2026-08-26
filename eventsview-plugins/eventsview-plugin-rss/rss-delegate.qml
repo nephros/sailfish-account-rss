@@ -27,7 +27,6 @@ SocialMediaAccountDelegate {
 
     providerName: "rss"
     services: ["Posts"]
-    periodicSyncLoopEnabled: false
     userRemovable: true
 
     model: RssPostsModel {}
