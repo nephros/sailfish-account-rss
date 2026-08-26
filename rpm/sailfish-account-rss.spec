@@ -80,7 +80,7 @@ fi
 %{_libdir}/qt5/qml/com/jolla/eventsview/rss/*
 %{_datadir}/lipstick/eventfeed/rss-delegate.qml
 %{_datadir}/lipstick/eventfeed/RssFeedItem.qml
-%{_datadir}/themes/sailfish-default/silica/*/icons/icon-l-rss.png
+%{_datadir}/themes/sailfish-default/silica/*/icons-monochrome/icon-l-rss.png
 %{_datadir}/translations/sailfish-account-rss_eng_en.qm
 %{_datadir}/translations/lipstick-jolla-home-rss_eng_en.qm
 %{_datadir}/translations/source/sailfish-account-rss.ts

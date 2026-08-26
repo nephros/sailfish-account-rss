@@ -8,4 +8,4 @@ CONFIG += sailfish-svg2png
 
 THEMENAME = sailfish-default
 
-DISTFILES += $$PWD/svgs/icons/icon-l-rss.svg
+DISTFILES += $$PWD/svgs/icons-monochrome/icon-l-rss.svg
