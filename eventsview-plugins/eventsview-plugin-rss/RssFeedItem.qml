@@ -13,6 +13,23 @@ SocialMediaFeedItem {
     property variant imageList
     property bool timestampValid: model.timestampValid
 
+    property bool compactLayout: false
+    states: [
+        State { name: "compact"; when: compactLayout
+            PropertyChanges: { target: item
+                topMargin: Theme.paddingMedium
+                bottomMargin: Theme.paddingMedium
+                avatar: ""
+                fallbackAvatar: ""
+            }
+            PropertyChanges: { target: itemTitleLabel
+                font.pixelSize: Theme.fontSizeSmall
+            }
+            PropertyChanges: { target: itemBodyLabel
+                font.pixelSize: Theme.fontSizeExtraSmall
+            }
+        }
+    ]
     timestamp: model.timestamp
     topMargin: Theme.paddingLarge
     bottomMargin: Theme.paddingLarge
@@ -51,6 +68,8 @@ SocialMediaFeedItem {
         }
 
         Label {
+            id: itemTitleLabel
+
             width: parent.width
             wrapMode: Text.Wrap
             maximumLineCount: 2
@@ -72,6 +91,8 @@ SocialMediaFeedItem {
         }
 
         Label {
+            id: itemBodyLabel
+
             width: parent.width
             visible: text.length > 0
             wrapMode: Text.Wrap

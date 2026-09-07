@@ -18,6 +18,8 @@ SocialMediaAccountDelegate {
     property var _busyProfiles: ({})
     property bool _syncedForVisibility
 
+    property bool compactLayout: false
+
     //% "News"
     headerText: qsTrId("lipstick-jolla-home-rss-la-header")
     headerIcon: "image://theme/icon-l-rss"
@@ -105,10 +107,18 @@ SocialMediaAccountDelegate {
         }
     }
 
+    ConfigurationValue {
+        id: compactLayoutConf
+
+        key: "/desktop/lipstick-jolla-home/events/compact_feed_layout/"
+             + root.account.identifier
+    }
+
     onExpandedClicked: collapsed = true
 
     Component.onCompleted: {
         refreshAccountsAndMaybeSync()
+        compactLayout = compactLayoutConf.value
     }
 
     onViewVisibleChanged: {
